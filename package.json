@@ -1,0 +1,83 @@
+{
+  "name": "nextjs-app-router-ts-vscode-snippets",
+  "displayName": "Next.js App Router (TypeScript)",
+  "description": "A VS Code extension to streamline development with Next.js using the App Router and TypeScript. Includes snippets, folder structure templates, and best practices to accelerate building modern applications with the new routing system.",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "publisher": "apws",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexandrepaiva-dev/nextjs-app-router-ts-vscode-snippets"
+  },
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "nextjs",
+    "typescript",
+    "nextjs app router",
+    "nextjs app router snippets",
+    "nextjs app router typescript snippets"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nextjsAppRouter.installSnippets",
+        "title": "Next.js: Install Snippets"
+      },
+      {
+        "command": "nextjsAppRouter.createAppFolder",
+        "title": "Next.js: Create App Folder with Boilerplate"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/nextjs.json"
+      }
+    ]
+  },
+  "scripts": {
+    "generate:snippets": "ts-node src/scripts/generate-snippets.ts",
+    "vscode:prepublish": "yarn run package",
+    "compile": "yarn run check-types && yarn run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "yarn run check-types && yarn run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "prepare:vsix": "yarn run generate:snippets && yarn run compile",
+    "build:vsix": "yarn run prepare:vsix && vsce package --no-yarn --out vsix/nextjs-app-router-ts.vsix",
+    "publish:vsix": "yarn run build:vsix && vsce publish --no-yarn"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "1.97.0",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.25.1",
+    "eslint": "^9.23.0",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "license": "MIT",
+  "activationEvents": [
+    "onCommand:nextjsAppRouter.installSnippets",
+    "onCommand:nextjsAppRouter.createAppFolder"
+  ]
+}
