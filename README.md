@@ -20,17 +20,17 @@ A VS Code/Windsurf extension with opinionated snippets for **Next.js App Router 
 
 ## ⚡ Available Snippets
 
-| Prefix               | Component        | Description                                                |
-| -------------------- | ---------------- | ---------------------------------------------------------- |
-| `nxtTemplate`        | template.tsx     | Next.js App Router template.tsx                            |
-| `nxtLayout`          | layout.tsx       | Next.js App Router RootLayout                              |
-| `nxtPage`            | page.tsx         | Next.js App Router Page with static metadata               |
-| `nxtLoading`         | loading.tsx      | Next.js App Router loading.tsx                             |
-| `nxtError`           | error.tsx        | Next.js App Router error.tsx (client component + reset)    |
-| `nxtNotFound`        | not-found.tsx    | Next.js App Router not-found.tsx (with metadata)           |
-| `nxtRouteHandlers`   | route.ts         | Next.js Route Handlers with all HTTP methods               |
-| `nxtComponentClient` | component-client | Next.js Client Component (with useState/useEffect example) |
-| `nxtComponentServer` | component-server | Next.js Server Component                                   |
+| Prefix               | File                | Description                                                |
+| -------------------- | ------------------- | ---------------------------------------------------------- |
+| `nxtTemplate`        | template.tsx        | Next.js App Router template.tsx                            |
+| `nxtLayout`          | layout.tsx          | Next.js App Router RootLayout                              |
+| `nxtPage`            | page.tsx            | Next.js App Router Page with static metadata               |
+| `nxtLoading`         | loading.tsx         | Next.js App Router loading.tsx                             |
+| `nxtError`           | error.tsx           | Next.js App Router error.tsx (client component + reset)    |
+| `nxtNotFound`        | not-found.tsx       | Next.js App Router not-found.tsx (with metadata)           |
+| `nxtRouteHandlers`   | route.ts            | Next.js Route Handlers with all HTTP methods               |
+| `nxtComponentClient` | ComponentClient.tsx | Next.js Client Component (with useState/useEffect example) |
+| `nxtComponentServer` | ComponentServer.tsx | Next.js Server Component                                   |
 
 ## 🛠️ How to Use
 
