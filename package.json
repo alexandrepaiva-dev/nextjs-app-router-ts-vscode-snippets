@@ -4,7 +4,7 @@
   "description": "A VS Code extension to streamline development with Next.js using the App Router and TypeScript. Includes snippets, folder structure templates, and best practices to accelerate building modern applications with the new routing system.",
   "version": "1.1.0",
   "icon": "icon.png",
-  "publisher": "apws",
+  "publisher": "alexandrepaiva-dev",
   "repository": {
     "type": "git",
     "url": "https://github.com/alexandrepaiva-dev/nextjs-app-router-ts-vscode-snippets"
@@ -59,7 +59,8 @@
     "test": "vscode-test",
     "prepare:vsix": "yarn run generate:snippets && yarn run compile",
     "build:vsix": "yarn run prepare:vsix && vsce package --no-yarn --out vsix/nextjs-app-router-ts.vsix",
-    "publish:vsix": "yarn run build:vsix && vsce publish --no-yarn"
+    "publish:vsix": "yarn run build:vsix && vsce publish --no-yarn",
+    "publish:windsurf": "ovsx login"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
